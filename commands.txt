@@ -1,0 +1,15 @@
+git clone https://github.com/<your-username>/<repository-name>.git
+cd <repository-name>
+touch commands.txt
+git checkout -b feature-update
+mkdir reports
+touch reports/summary.md
+echo "This document provides a summary of the project updates." > reports/summary.md
+git add reports
+git commit -m "Add reports directory"
+touch reports/file{1,2,3}.txt
+git mv data/raw-data.csv data/input-data.csv
+mkdir scripts/backup && cp scripts/*.py scripts/backup/
+git rm docs/documentation.md
+git add .
+git commit -m "Update project files"
